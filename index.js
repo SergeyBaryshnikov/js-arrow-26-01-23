@@ -11,7 +11,7 @@
  * @returns {[number]}
  */
 const getMinMaxWay1 = (arr) => {
-  arr.sort().splice(1, arr.length - 2);
+  arr.sort((a, b) => a - b).splice(1, arr.length - 2);
   return arr;
 };
 
@@ -28,7 +28,7 @@ const getMinMaxWay2 = (arr) => {
   return resultArr;
 };
 
-const numbersArray = [2, 44, 5, 6, 7, 999, 0, -6];
+const numbersArray = [2, 44, 5, 6, 7, 999, 0, -6, 1000];
 const emptyArray = [];
 
 console.log(getMinMaxWay1(numbersArray));
